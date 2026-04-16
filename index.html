@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Summarizer</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+
+        .container {
+            background: white;
+            width: 600px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 140px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            resize: none;
+        }
+
+        .btn-group {
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px 18px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .summarize-btn {
+            background: #8c00ff;
+            color: white;
+        }
+
+        .summarize-btn:hover {
+            background: #6200b3;
+        }
+
+        .clear-btn {
+            background: #f44336;
+            color: white;
+        }
+
+        .clear-btn:hover {
+            background: #c62828;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f4f6f8;
+            border-radius: 8px;
+            min-height: 60px;
+            text-align: left;
+        }
+
+        .label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>📝 Text Summarizer</h1>
+
+    <span class="label">Enter Text:</span>
+    <textarea id="inputText" placeholder="Paste your text here..."></textarea>
+
+    <div class="btn-group">
+        <button class="summarize-btn" onclick="summarizeText()">Summarize</button>
+        <button class="clear-btn" onclick="clearText()">Clear</button>
+    </div>
+
+    <div id="output">
+        <span class="label">Summary:</span>
+        <div id="result">Your summary will appear here...</div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

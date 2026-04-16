@@ -13,5 +13,9 @@ function summarizeText() {
     // Take top 2 sentences as summary
     let summary = sentences.slice(0, 2).join(". ") + ".";
 
-    document.getElementById("output").innerText = summary;
+    document.getElementById("result").innerText = summary;
+}
+function clearText() {
+    document.getElementById("inputText").value = "";
+    document.getElementById("result").innerText = "Your summary will appear here...";
 }
